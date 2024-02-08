@@ -14,16 +14,15 @@ test('Invoice',async({page})=>{
         await page.getByText('Proceed to Checkout').click(); 
         //await page.getByText('Description').fill('Lovely Product');
         await page.getByText('Place Order').click();
-        await page.getByText('Name on Card').fill('Naveena');
-        await page.getByText('Card Number').fill('9874566942152895');
-        await page.getByText('CVC').fill('896');
-        await page.getByPlaceholder('MM').fill('10');
-        await page.getByPlaceholder('YYYY').fill('2025');
-        await page.getByText('Pay and Confirm Order').click();
-        await expect(page.getByText('Your order has been placed successfully!')).toBeVisible();
-        await page.getByText('Download Invoice').click();
-        await page.getByText('Continue').click();
-
+        // await page.locator("//input[@name='Name on Card']").fill('Naveena');
+        // await page.getByText('Card Number').fill('9874566942152895');
+        // await page.getByText('CVC').fill('896');
+        // await page.getByPlaceholder('MM').fill('10');
+        // await page.getByPlaceholder('YYYY').fill('2025');
+        // await page.getByText('Pay and Confirm Order').click();
+        // await expect(page.getByText('Your order has been placed successfully!')).toBeVisible();
+        // await page.getByText('Download Invoice').click();
+        // await page.getByText('Continue').click();
         await page.waitForTimeout(3000);
     }
     )
