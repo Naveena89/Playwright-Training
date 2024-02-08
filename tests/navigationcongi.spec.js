@@ -1,6 +1,6 @@
 // navigation config
 const {test,expect}=require('@playwright/test')
-test.only('Navigation Config',async({page})=>{
+test('Navigation Config',async({page})=>{
         await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
         await expect(page).toHaveTitle('OrangeHRM');
         await page.locator("//input[@name='username']").click();
