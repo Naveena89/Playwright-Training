@@ -1,7 +1,6 @@
 import {test,expect} from '@playwright/test'
-test('Xpath',async ({page})=>
-{
-    await page.goto('https://demoqa.com/automation-practice-form')
+test('Xpath',async ({page})=>{
+    await page.goto('https://demoqa.com/automation-practice-form');
     await page.locator("//div[text()='Elements']").click();
     await page.locator("//span[text()='Text Box']");
     await page.locator("//span[text()='Check Box']");
@@ -13,5 +12,4 @@ test('Xpath',async ({page})=>
     await page.locator("//span[text()='Upload and Download']");
     await page.locator("//span[text()='Dynamic Properties']");
     await page.close()
-}
-)
+});
