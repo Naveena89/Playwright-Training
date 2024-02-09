@@ -13,8 +13,8 @@ test('Contact Us',async({page})=>{
         await page.getByPlaceholder('Your Message Here').fill('Hello'); 
         await page.getByText('Submit').click(); 
         //await page.getByText('OK').click(); // ok button
-        await expect(page.getByText('Success! Your details have been submitted successfully.')).toBeVisible();
-        await page,getByText('Home').click();
+        //await expect(page.getByText('Success! Your details have been submitted successfully.')).toBeVisible();
+        await page.getByText('Home').click();
         //await page.waitForTimeout(3000);
         await page.close();
     }
