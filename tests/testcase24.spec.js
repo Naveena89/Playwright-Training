@@ -14,8 +14,8 @@ test('Invoice',async({page})=>{
         await page.getByText('Proceed to Checkout').click(); 
         //await page.getByText('Description').fill('Lovely Product');
         await page.getByText('Place Order').click();
-        // await page.locator("//input[@name='Name on Card']").fill('Naveena');
-        // await page.getByText('Card Number').fill('9874566942152895');
+        await page.locator("//input[@class='form-control']").fill('Naveena');
+        //await page.getByText("//input[@name='card_number']").fill('9874566942152895');
         // await page.getByText('CVC').fill('896');
         // await page.getByPlaceholder('MM').fill('10');
         // await page.getByPlaceholder('YYYY').fill('2025');
@@ -24,5 +24,4 @@ test('Invoice',async({page})=>{
         // await page.getByText('Download Invoice').click();
         // await page.getByText('Continue').click();
         await page.waitForTimeout(3000);
-    }
-    )
+    });
