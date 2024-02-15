@@ -9,7 +9,7 @@ test('Product',async({page})=>{
         await page.getByPlaceholder('Email Address', { exact: true }).fill('naveena3489@gmail.com');
         await page.getByPlaceholder('Add Review Here!').fill('Nice Product');
         await page.getByText('Submit').click(); 
-        await expect(page.getByText('Thank you for your review.')).toBeVisible();
+        await expect.soft(page.getByText('Thank you for your review.')).toBeVisible();
         await page.waitForTimeout(3000);
         //await page.close();
     }

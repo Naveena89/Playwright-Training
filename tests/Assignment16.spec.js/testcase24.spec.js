@@ -7,9 +7,8 @@ test('Invoice',async({page})=>{
         await page.locator("//input[@data-qa='login-email']").fill('naveena3489@gmail.com');
         await page.locator("//input[@data-qa='login-password']").fill('Naveena89')
         await page.locator("//button[@data-qa='login-button']").click();
-        //await page.getByText('Continue Shopping', { exact: true }).click();
-        //await page.getByRole('link', { name: ' Products' }).click();
-        //await page.getByText('Add to Cart', { exact: true }).first().click();
+        await page.getByRole('link', { name: ' Products' }).click();
+        await page.locator("//div[@class='productinfo text-center']//a[@data-product-id='1']").click();
         await page.getByText('Cart', { exact: true }).click();
         await page.getByText('Proceed to Checkout').click(); 
         //await page.getByText('Description').fill('Lovely Product');
@@ -20,8 +19,7 @@ test('Invoice',async({page})=>{
         await page.getByPlaceholder('MM').fill('10');
         await page.getByPlaceholder('YYYY').fill('2025');
         await page.getByText('Pay and Confirm Order').click();
-        //await expect.soft(page.getByText('Your order has been placed successfully!')).toBeVisible();
         await page.getByText('Download Invoice').click();
-        await page.getByText('Continue').click();
+        await page.getByText.soft('Continue').click();
         await page.waitForTimeout(3000);
     });

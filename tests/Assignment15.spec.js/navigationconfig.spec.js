@@ -8,5 +8,5 @@ test('Navigation Config',async({page})=>{
         await page.locator("//input[@name='password']").click();
         await page.locator("//input[@name='password']").fill('admin123');
         await page.locator("//button[@type='submit']").click();
-        await page.locator("//span[text()='Admin']").click(); //Admin button
+        await page.locator("//span[text()='PIM']").click(); 
 });
